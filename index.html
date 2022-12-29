@@ -1,26 +1,429 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Login</title>
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-        <link href="style.css" rel="stylesheet" type="text/css">
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>islamic media</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+  <link href="style.css" rel="stylesheet" type="text/css">
         
-	</head>
-	<body>
-		<div class="login">
-			<h1>Login</h1>
-			<form action="authenticate.php" method="post">
-				<label for="username">
-					<i class="fas fa-user"></i>
-				</label>
-				<input type="text" name="username" placeholder="Username" id="username" required>
-				<label for="password">
-					<i class="fas fa-lock"></i>
-				</label>
-				<input type="password" name="password" placeholder="Password" id="password" required>
-				<input type="submit" value="Login">
-			</form>
-		</div>
-	</body>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+  </style>
+</head>
+<body id="index.html" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html">Busia islamic Media</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">Login</a></li>
+        <li><a href="home.html" target="_blank">HOME</a></li>
+        <li><a href="#dawa">DAWAH</a></li>
+        <li><a href="#hadith">HADITH OF THE DAY</a></li>
+        <li><a href="register.html" target="_blank">Register</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="islam.html">Islamic Sociaty</a></li>
+            <li><a href="names.html"target="_blank">Allah's Names</a></li>
+            <li><a href="blog.html"> Islamic Blog</a></li> 
+          </ul>
+        </li>
+        <li><a href="frontpage.html"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="/images/4.jfif" alt="New York" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>invit them to islam</h3>
+          <p>best sunah for a day.</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="/images/3.jfif" alt="Chicago" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Dawa for life</h3>
+          <p> lets call upon them - As the Quran says.</p>
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="/images/dawa1.jfif" alt="Los Angeles" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Mission is Dawa</h3>
+          <p>Dawa the mission of muslim ummah</p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Container (The dawa Section) -->
+<div id="dawa" class="container text-center">
+  <h3>THE DAWAH</h3>
+  <p><em>We love islam!</em></p>
+  
+<video width="800" controls>
+  <source src="/image/ISLAM2 type="video/mp4">
+  
+  Your browser does not support HTML video.
+</video>
+
+<p>
+you can watch other videos  here 
+<a href="video.html" target="_blank">list of videos </a>.
+</p>
+
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>ads!</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="/images/download (3).jfif" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo" class="collapse">
+        <p>Guitarist and Lead Vocalist</p>
+        <p>Loves long walks on the beach</p>
+        <p>Member since 1988</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>ads!</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="/images/download (6).jfif" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo2" class="collapse">
+        <p>Drummer</p>
+        <p>Loves drummin'</p>
+        <p>Member since 1988</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>ads!</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="/images/download.jfif" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+        <p>Bass player</p>
+        <p>Loves math</p>
+        <p>Member since 2005</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container (hadith Section) -->
+<div id="hadith" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">Hadith of the day</h3>
+    <p class="text-center">Will I See a Dream After Conducting the Istikhārah?<br>
+
+      It is not necessary to see a dream, nor is it necessary to have a particular feeling. After the procedure of istikhārah, do what one feels is the best action, knowing that the best outcome is what the Almighty has decided.  – (Al-Dur Al-Mukhtār, Qāmūs Al-Fiqh)</p>
+    
+    
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="/images/dawa1.jfif" alt="Paris" width="400" height="500">
+          <p><strong>Hadith of the day</strong></p>
+          <p>قُلْ إِن كُنتُمْ تُحِبُّونَ اللَّـهَ فَاتَّبِعُونِي
+
+           <br> “Tell them, [O Moḥammad], “If you love God, then follow me, [thereafter] God will love you and forgive you.” (Qurʾān: 3:31)</p>
+          
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="/images/dawa2.jfif" alt="New York" width="400" height="500">
+          <p><strong>Hadith of the day</strong></p>
+          <p>اَفْعَالُ وَاقْوَالُ وَاَحْوَالُ وَاَيَّامُ رَسُوْلِ اللهِ
+
+           <br> Sīrah refers to the actions, words, conditions and events from the life of God’s Messenger, Muḥammad (peace and blessings upon him).</p>
+          
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="/images/images.jfif" alt="San Francisco" width="400" height="500">
+          <p><strong>Hadith of the day</strong></p>
+          <p>لاَ يُؤْمِنُ أَحَدُكُمْ حَتَّى يَكُونَ اللهُ وَرَسُولُهُ أَحَبَّ إِلَيْهِ مِمَّا سِوَاهُمَا
+
+          <br>“None of you have complete faith until God and His Prophet are more beloved to you than anything else.” (Kitāb Al-Sunnah Li Abī Bakr)
+</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  
+
+<!-- Container (Contact Section) -->
+<div id="register.html" class="container">
+  <h3 class="text-center">Register Now</h3>
+  <p class="text-center"><em>Regiter to be able to login when your back</em></p>
+  <div class="register.html">
+    <h1>Register</h1>
+    <form action="authenticate.php" method="post" autocomplete="off">
+      <label for="username">
+        <i class="fas fa-user"></i>
+      </label>
+      <input type="text" name="username" placeholder="Username" id="username" required>
+      <label for="password">
+        <i class="fas fa-lock"></i>
+      </label>
+      <input type="password" name="password" placeholder="Password" id="password" required>
+      <label for="email">
+        <i class="fas fa-envelope"></i>
+      </label>
+      <input type="email" name="email" placeholder="Email" id="email" required>
+      <input type="submit" value="Register">
+    </form>
+  </div>
+  <br>
+  <h3 class="text-center">From The Blog</h3>  
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Orphans</a></li>
+    <li><a data-toggle="tab" href="#menu1">woman dressing code</a></li>
+    <li><a data-toggle="tab" href="#menu2">Mosque building</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h2>wealth of orphans</h2>
+      <p>“(As for) those who swallow the property of the orphans unjustly, surely they only swallow fire into their bellies and they shall enter burning fire.” (Surah an-Nisa’ 4:10).</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h2>women dressing code</h2>
+      <p>Some Muslim women wear full-body garments that only expose the eyes, although there is no Quranic text requiring this extreme. Some cover every part of the body except their face and hands. Some believe only their hair or their cleavage is compulsory to hide, and others do not observe any special dress rules.23 Dec 2015
+      </p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h2>masjid Nuru</h2>
+      <p>“He alone can keep the Mosques of Allah in a good and flourishing condition who believes in Allah, and the Last Day, and observes Prayer, and pays the Zakat, and fears none but Allah; so these it is who may be among those who reach the goal.” [Surah al-Taubah, Ch.9: V.18]</p>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="/images/light.jpg" class="img-responsive" style="width:100%">
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Busia islamic Media <a href="frontpage.html" data-toggle="tooltip" title="Visit busia islamic media">www.islamic media.com</a></p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
 </html>
