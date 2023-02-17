@@ -7,7 +7,7 @@ $message = $_POST['message'];
 if($email !=''&& $name !=''&& $message !='')
 {
 //  To redirect form on a particular page
-header("Location:https://github.com/shamba-umar/Busia-islamic-media/");
+header("Location:index.html");
 }
 else{
 ?><span><?php echo "Please fill all fields.....!!!!!!!!!!!!";?></span> <?php
