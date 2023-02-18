@@ -22,7 +22,7 @@
 <input id='btn' name="submit" type='submit' value='Submit'>
 <!---- Including PHP File Here ---->
 <?php
-include "include/https://github.com/shamba-umar/Busia-islamic-media/";
+include "/https://github.com/shamba-umar/Busia-islamic-media/";
 ?>
 </form>
 </div>
