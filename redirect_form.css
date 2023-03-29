@@ -1,0 +1,51 @@
+h2 {
+    text-align:center
+    }
+    hr {
+    margin-bottom:-10px
+    }
+    span {
+    color:red;
+    margin-left:65px
+    }
+    div.main {
+    width:960px;
+    height:655px;
+    margin:50px auto;
+    font-family:'Droid Serif',serif
+    }
+    div.first {
+    width:380px;
+    height:570px;
+    float:left;
+    padding:15px 50px;
+    background:#f8f8ff;
+    box-shadow:0 0 10px gray;
+    margin-top:20px
+    }
+    input {
+    width:100%;
+    padding:8px;
+    margin-top:10px;
+    font-size:16px;
+    margin-bottom:25px;
+    box-shadow:0 0 5px;
+    border:none
+    }
+    #btn {
+    width:100%;
+    padding:8px;
+    margin-top:10px;
+    background-color:#474242;
+    cursor:pointer;
+    color:#fff;
+    border:2px solid #adadad;
+    font-size:18px;
+    font-weight:700;
+    font-family:'Droid Serif',serif;
+    margin-bottom:15px
+    }
+    #btn:hover {
+    background-color:#adadad;
+    border:2px solid #474242
+    }
