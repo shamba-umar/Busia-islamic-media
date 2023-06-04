@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Al-Isra’ wal-Mi’raj</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #080808;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+.container{
+  width: 100%;
+  height: 50%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Muhammad in Qur’an #Busia-islamic-media</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="names.html">99Names of Allah</a></li>
+        <li><a href="islamicsociaty.html">Islamic sociaty</a></li>
+        <li><a href="hadith.html">Hadith of the day</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="SAW.html">Lern about the Prophet_Muhammad_<font color="blue">(ﷺ)</font></a></li>
+            <li><a href="media.html">Islamic Media</a></li>
+            <li><a href="blog.html">Islamic Blog </a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br><br>
+</div>
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="islamicsociaty.html">islamic sociaty</a></p>
+      <p><a href="blog.html">Islamic Blog</a></p>
+      <p><a href="media.html">Islamic Media</a></p>
+    </div>
+    <div class=" text-left"> 
+      <div class="col-sm-8">
+        <img src="/Busia-islamic-media/images/iss.jpg" alt="iss"
+      </div>
+        <hr>
+      <h1>The Story of the Miraculous Night Journey</h1>
+      <p>Al-Isra’ wal-Mi’raj (the Night Journey & Ascension) is a miracle second only to the
+         revelation of the Qur’an, and it is therefore important that we don’t let this night
+          slip by without reflecting on its lessons and its significance.
+
+        Many of us only know the basic story of Al-Isra’ wal-Mi’raj - that the Prophet 
+        (saw) was transported from al-Masjid al-Haram to al-Masjid al-Aqsa, from where he (saw) 
+        ascended to heaven. In fact, there were many stops along this incredible journey, 
+        and the story is packed with wonders and miracles. This blog will narrate the first 
+        half of the Miraculous Journey and we have included as much detail as we could. Enjoy!</p>
+          him.[2][3] Also, Surah (chapter) 47 of the Quran is called "Muhammad".[4]</p>
+      <h4>Context of Al-Isra’ wal-Mi’raj</h4>
+      <p>Al-Isra’ wal-Mi’raj took place during a time when the Prophet (saw) was facing intense hardship
+         and pain. The Quraysh, who were his tribe and his family, constantly ridiculed, humiliated and
+          oppressed the Prophet (saw) and his followers. Moreover, the Prophet (saw) had just faced the
+           Year of Sorrow (’Aam al-Huzn), during which he (saw) lost his beloved wife Khadijah (ra), 
+           and his uncle Abu Talib, who was his protector and ally.</p>
+        <p>In addition to all these burdens, when the Prophet (saw) had travelled to Ta’if to spread the Islamic
+            message, the people of Ta’if had rejected him in the most cruel way, sending their children into the 
+            streets to stone him until he left the city.</p>
+          <p>Having gone through so much grief and suffering, the Prophet Muhammad (saw) 
+            was given a truly beautiful and comforting gift. He was transported not only 
+            to the Sacred Sanctuary and through the skies, but ultimately into the Divine Presence, 
+            the source of all comfort and hope. One of the most important lessons of Al-Isra’ wal-Mi’raj, 
+            therefore, is that ‘with every hardship [there will be] ease’ (The Noble Qur’an, 94: 5). </p>
+          <hr>
+          <h4>Al-Isra’: From the Ka’bah to Al-Aqsa</h4>
+          <p>When the Prophet (saw) was sleeping in the house of Umm Hani (ra) in Makkah he said, ‘the roof of my
+             house was opened and the Angel Jibril [as] descended’ (Bukhari). Scholars reconciling between various
+              narrations, say the Prophet (saw) was then taken to the Hijr, the semi-circular wall of the Ka‘bah,
+               where the Prophet (saw) said that Jibril (as), ‘opened my chest, and washed it with Zamzam water.
+               Then he brought a golden tray full of wisdom and faith, and having poured its contents into my chest,
+                he closed it’. [Bukhari]</p>
+          <p>The Prophet (saw) continued, ‘I was then brought a white beast which is called al-Buraq [from the
+             Arabic word barq, meaning lightning], bigger than a donkey and smaller than a mule. Its stride was
+              as long as the eye could reach’. [Muslim]</p>
+        <p>It is narrated by Anas (ra) that Buraq was, ‘saddled and reined, but he shied from him (saw).
+             So Jibril [as] said to him, “Is it from Muhammad [saw] that you do this? For nobody has ridden
+              you who is more honourable to Allah than him!” He said, “Then he started sweating profusely”’. 
+              [Tirmidhi]</p>
+        <div >
+            <img src="/Busia-islamic-media/images/iss3.jpg"alt="aiss3">
+        </div>
+          <p>At several points along the journey, Jibra’eel (as) stopped Buraq and told the Prophet (saw),
+             ‘Dismount and pray’. The first stop was at ‘the place of emigration’ i.e. Madinah - and soon 
+             after this night the Prophet (saw) would meet the Ansar and migrate to Madinah. The second stop
+              was at Mount Sinai, where Allah (swt) revealed the Torah to Musa (as). The third stop was at Bethlehem,
+               where ’Isa (as) was born.</p>
+          <p>The fourth stop was the grave of Musa (as), ‘I happened to pass by Musa [as] on the night of my Night
+             journey by the red sandhill whilst he was standing praying in his grave’ (Muslim). We know that his
+              grave is located, ‘a stone’s throw’ away from the holy land of the Blessed Masjid Al-Aqsa (Bukhari).
+              This incident clearly shows us an example of what the Messenger of Allah (saw) said about Prophets (as)
+               after they pass away that, ‘The Prophets are alive in their graves praying’ (Abu Ya‘la).</p>
+          <h3>Arriving at Al-Aqsa</h3>
+          <p>Finally, the Messenger of Allah (saw) arrived in the holy city of Al-Quds (Jerusalem) and he said,
+             ’When we reached Bait al-Maqdis [literally ‘the holy house’ another name for the Blessed Masjid Al-Aqsa]
+              Jibril (as) pointed with his finger causing a crack in the rock, and he tied the Buraq to it
+               [at the western wall of the noble sanctuary]’ (Tirmidhi). Waiting inside were all 124,000 Prophets
+               (as). Jibra’eel (as) led the Prophet (saw) to the front, and he (saw) led them all in prayer in this 
+               blessed space.</p>
+               <p>Some narrations indicate that the Prophet (saw) prayed ‘two units of prayer’ (Muslim) to greet 
+                the Masjid (known as Tahiyyat al-Masjid). This is one of the first examples of this established Sunnah 
+                of the Prophet (saw). It is also mentioned that Jibril (as) called the Adhan (call to prayer)
+                 before this practice was even established later in Madinah and that the angels from the heavens
+                  descended to pray behind all the Prophets in this sacred place – Subhan-Allah!</p>
+                  <br>
+        <p>When the Prophet (saw) completed the prayer, he said, ‘someone said, “Here is Malik (as),
+             the keeper of the Hell, so convey Salams to him”. So, I turned to him, but he preceded me in 
+             Salams’ (Muslim).</p>
+        <p>The Messenger of Allah (saw) also said, ’The Prophets were presented to me, and Musa (as) was a thin man,
+            it was as if he was from the men of Shanu’ah [a Yemeni tribe]. And I saw ’Isa ibn Maryam (as), and the 
+            closest of the people in resemblance to him from those I have seen, is ‘Urwah ibn Mas‘†d (ra). And I saw
+            Ibrahim (as), and the closest of the people in resemblance to him, from those I have seen, is your companion
+             [meaning himself]. And I saw Jibril [as], and the closest of the people in resemblance to him, from those I
+             have seen, is Dihyah (ra)’ (Tirmidhi).</p>
+          <p>Part of what the Prophets (as) discussed after praising Allah was about ‘the Hour’. Both Ibrahim
+             (as) and Musa (as) stated that they ‘did not have any knowledge of it’. Whilst ’Isa (as) ’mentioned
+             the Dajjal (anti-Christ) and said,</p>
+          <p>“I will descend and kill him, then the people will return to their own lands and will be confronted with
+             Gog and Magog, who will, “swoop down from every mound” [Qur’an, 21:96]”’. [Ibn Majah]</p>
+          <p>Following this, the Prophet (saw) said, ‘Then I came out and Jibril (as) brought me a vessel of wine and a 
+            vessel of milk. Then I chose the milk, 
+            and Jibril (as) said, “You have chosen the natural state (Fitrah)”’ (Muslim).</p>
+        <p>The dominant opinion is that the Prophet (saw) alongside Jibril (as) then proceeded to the Noble Rock
+            (as-Sakhrah al-Musharrafah) that is currently housed by the holy Dome of the Rock Masjid at the centre 
+            of the noble sanctuary (al-Haram ash-Sharif) of the Blessed Masjid Al-Aqsa. He (saw) ascended into the
+             heavens for the next part of this incredible journey, the Mi‘raj, the Ascension!</p>
+        
+        <hr>
+        <p>Find out what happened next in <a href="issra2.html">our latest pape!</a>
+
+        </p>
+      
+
+ <h3>Why is it so important for us to understand and reflect upon the spiritual significance of Al-’Isrā’ wal-Miʿrāj?</h3>
+<div class="slideshow-container">
+
+  <div class="mySlides">
+    <q> As Muslims, Al-’Isrā’ wal-Miʿrāj is a reminder of the centrality of our faith and its place in our lives. It demonstrates just how precious and valuable our relationship with Allah (SWT) is. By understanding this event and reflecting upon it, we can be reminded of the importance of prayer, obedience to Allah’s commands and striving for closeness to Him. We also remember that it was through Muhammad (PBUH) that we were given access to all of these spiritual gifts and promises from Allah, as well as enlightenment on what He expects from us as His servants.
+
+
+      </q>
+    <p class="author"><font color="blue"></font></p>
+  </div>
+  
+  <div class="mySlides">
+    <q>Through reflection upon the spiritual significance of Al-’Isrā’ wal-Miʿrāj, we can be reminded to remain devoted to Allah and thankful for His mercy and guidance. It is an important reminder that no matter what difficulties or challenges life throws our way, if we continue to strive for closeness to Allah then He will always be there with us to provide support and comfort. Finally, it serves as a model of the spiritual journey on which we should all embark in order to attain a closer connection with our Creator. In its journey through the heavens, Al-’Isrā’ wal-Miʿrāj reminds us of how much effort it takes to stay close to Allah and also shows us just how powerful our faith can be when properly applied in our lives.</q>
+    <p class="author"><font color="blue"></font></p>
+  </div>
+  
+  <div class="mySlides">
+    <q>Thus, by understanding and reflecting upon the spiritual significance of Al-’Isrā’ wal-Miʿrāj, we can be reminded of the importance of faith, prayer and obedience to Allah’s commands in our lives. It serves as a guide for our own spiritual journey towards closeness with Allah (SWT). We should take comfort knowing that Allah will always be there for us if we strive to stay close to Him.</q>
+        </q>
+    <p class="author">Battle of the Trench</p>
+  </div>
+  
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  </div>
+  
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+  
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+  
+  <br>
+
+  <br>
+  
+
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">www.w3schools.com</a></p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
