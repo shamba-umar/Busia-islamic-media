@@ -1,91 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap 5 Website Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<title>islamicsociaty</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  <style>
-  .fakeimg {
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+.fakeimg {
     height: 200px;
-    background: #aaa;
+    background: #666262;
     opacity: 0.8;
   }
-  .bg-primary{
-    background-image:url(/Busia-islamic-media/images/man\ q.jpg) ;
-    background-repeat: no-repeat;
-max-width: 1000;
-  }
-  </style>
+</style>
 </head>
 <body>
 
-    
-   
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <div class="container-fluid">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Active</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-sm-4">
-      <h2>About Me</h2>
-      <h5>Photo of me:</h5>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-      <h3 class="mt-4">Some Links</h3>
-      <p>Lorem ipsum dolor sit ame.</p>
-      <ul class="nav nav-pills flex-column">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Active</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
-      <hr class="d-sm-none">
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="" class="w3-bar-item w3-button w3-padding-large">islamic sociaty</a>
+    <a href="dawa.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Da’wah</a>
+    <a href="names.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">99Names</a>
+    <a href="SAW.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Prophet Muhammad (ﷺ)</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="blog.html" class="w3-bar-item w3-button">Islamic Blog</a>
+        <a href="media.html" class="w3-bar-item w3-button">Islamic Media</a>
+        <a href="mail.html" class="w3-bar-item w3-button">mail to</a>
+      </div>
     </div>
-    <div class="col-sm-8">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2020</h5>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-
-      <h2 class="mt-5">TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2020</h5>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
   </div>
 </div>
 
-<div class="mt-5 p-4 bg-dark text-white text-center">
-  <p>Footer</p>
-</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/Busia-islamic-media/images/sis pray.jpg" style="width:50%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-30 w3-hide-small">
+      <h3>text</h3>
+      <p><b>texttexttexttexttexttexttext</b></p>   
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/Busia-islamic-media/images/dawa1.jfif" style="width: 50%;">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-30 w3-hide-small">
+      <h3>text</h3>
+      <p><b>texttexttexttexttexttexttexttexttexttexttextb></p>    
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w2-center">
+    <img src="/Busia-islamic-media/images/mother sis.jpg" style="max-width: 50%;">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-30 w3-hide-small">
+      <h3>texttext</h3>
+      <p><b>texttexttexttexttexttexttexttexttexttexttexttext</b></p>    
+    </div>
+  </div>
+
+  <!-- The data Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="">
+    <h2 class="w3-wide"> The islamic sociaty</h2>
+    <p class="w3-opacity"></p>
+    <p class="w3-opacity"><p>Islam does not encourage its followers becoming hermits and living a stoic life. Rather, Islam is a religion of society and encourages the establishment and sustaining of a society in which the members of the society interact and cooperate with each other. Islam wants its followers to live within the society and while staying there, make the existence useful for the members of the society.
+
+      The Islamic society can clearly be distinguished from any other society in the world. It has certain characteristic attributes that differentiate it from the rest of the societies of the world and the identity of a Muslim society is universal and Muslims from different parts of the world can easily form and adjust in an Islamic society, regardless of their cultural differences</p>.</p>
+   <br><q>O you who believe! Fear God as He should be feared and die not except in a state of Islam.” <font color="blue">(3:102),(2:143),(23:52), (42:38), (2:256)</font></font></q>
+      <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <p>Ads</p>
+        <img src="/Busia-islamic-media/images/um.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p>Brotherhood</p>
+        <img src="/Busia-islamic-media/images/bro.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p>family</p>
+        <img src="/Busia-islamic-media/images/w&m.jpg" class="w3-round" alt="Random Name" style="width:60%">
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-4">
+        <h2>Goodness to neighbours</h2>
+        <h5></h5>
+        <div class="fakeimg">Fake Image</div>
+        <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+        <h3 class="mt-4">Some Links</h3>
+        <p>Lorem ipsum dolor sit ame.</p>
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+        <hr class="d-sm-none">
+      </div>
+      <div class="col-sm-8">
+        <h2>TITLE HEADING</h2>
+        <h5>Title description, Dec 7, 2020</h5>
+        <div class="fakeimg">Fake Image</div>
+        <p>Some text..</p>
+        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  
+        <h2 class="mt-5">TITLE HEADING</h2>
+        <h5>Title description, Sep 2, 2020</h5>
+        <div class="fakeimg">Fake Image</div>
+        <p>Some text..</p>
+        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      </div>
+    </div>
+  </div>
+  
+
+<!-- Image of location/map -->
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 
 </body>
 </html>
