@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>muslim husband</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta nam="description" content="html,css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #080808;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+.container{
+  width: 100%;
+  height: 50%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Amuslim husband#Busia-islamic-media</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="names.html">99Names of Allah</a></li>
+        <li><a href="islamicsociaty.html">Islamic sociaty</a></li>
+        <li><a href="hadith.html">Hadith of the day</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="SAW.html">Lern about the Prophet_Muhammad_<font color="blue">(ﷺ)</font></a></li>
+            <li><a href="media.html">Islamic Media</a></li>
+            <li><a href="blog.html">Islamic Blog </a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br><br>
+</div>
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="islamicsociaty.html">islamic sociaty</a></p>
+      <p><a href="blog.html">Islamic Blog</a></p>
+      <p><a href="media.html">Islamic Media</a></p>
+    </div>
+    <div class=" text-left"> 
+      <div class="col-sm-8">
+        <img src="/Busia-islamic-media/images/pease m&w.jpg" alt="iss" width="80%"height="40%"
+      </div>
+      <p>The Qur'an states that men are in charge of women because God has favored one over the other and they are responsible to provide them.</p>
+      
+        <hr>
+      <p>Women, however, are given a degree of autonomy over their own income and property. Nevertheless, they are responsible for educating the children, as God has given the one preference over the other. Man is also considered to be the head of the family. The Qur'an recommends that wives be obedient and adaptable to their husbands. Wives should also keep the secrets of their husbands and protect their honor and integrity. Islamic scholars consider this important in running a smooth family system.</p>
+    <hr>
+    <h2>Male and female relationships in the times of Muhammad</h2><br><br>
+        <p>In her book Qur'an and Women, scholar <font color="blue">Amina Wadud</font> writes about the importance of women in the time of Muhammad. During this time, women did not have access to the technology that women today have; giving birth and raising children was much more difficult due to diseases and lack of healthcare knowledge. For this reason, Wadud writes, "The Qur'an establishes his [the husband's] responsibility as qiwamah: seeing to it that the women is not burdened with additional responsibilities which jeopardize that primary demanding responsibility only she can fulfill." The need to reproduce and raise children contributed to the importance of gender roles in the time of Muhammad.<br><br>
+        
+        Scholar <font color="blue">Ayesha Chaudhry</font> writes that many Muslims have this fundamentally flawed way of examining the text, writing that "Despite the potential for such verses [4:34] to have multiple plain-sense meanings, living Muslim communities place these interpretations in conversation with the pre-colonial Islamic tradition".</p>
+    
+    <h2>How to Be a Successful Muslim Husband</h2>
+    <p>To be a successful Muslim husband, be loving, <br>attentive, and respectful of your spouse. Work with your spouse to uphold your faith.<br> Share your thoughts and feelings, and encourage your <br>partner to do the same. <br>By showing affection, building trust, and paying attention to that which brings <br>you closer to Allah in your spouse, you can be a successful Muslim husband.</p>
+        
+<h2><b>Building astrongle relationship as a man to your wife</b></h2>
+<p>Regardless of whether or not Islam has made the husband the head of the household,<br> Muslims are not supposed to be dictators and tyrants. We are taught to treat our wives well. The Prophet Muhammad (SAWS) was reported to have said: 'The most perfect Muslim in the matter of faith is one who has excellent behavior; and the best among you are those who behave best towards their wives" , Prophet Muhammad (SAWS) clearly stated how men should treat their wives.</p>
+<h2>Key to a successfull marriage</h2>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <div class="card">
+      <img src="/Busia-islamic-media/images/pease 2.jpg" class="card-img-top" alt="pease 2">
+      <div class="card-body">
+        <h5 class="card-title"><b>communicate clearly and often</b></h5>
+        <p class="card-text">Talking with your spouse is one of the best ways to keep your marriage healthy and successful. Be honest about what you're feeling, but be kind and respectful when you communicate.Part of good communication is being a good listener and taking the time to understand what it is your spouse wants and needs from you. Keep the lines of communication open by talking often, and not just about things like bills and the kids. Share your thoughts and feelings. </p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="col">
+    <div class="card">
+      <img src="/Busia-islamic-media/images/loveg m.jpg" class="card-img-top" alt="loveg m">
+      <div class="card-body">
+        <h5 class="card-title"><b>Tell your spouse that you're thankful for having him or her in your life</b></h5>
+        <p class="card-text">Appreciate each other, your relationship, your family, and your lives together. Show gratitude when your partner cooks dinner, helps the kids with their homework, or does the grocery shopping. It may help to take a few minutes each evening to tell each other at least one thing you appreciated that day. </p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="col">
+    <div class="card">
+      <img src="/Busia-islamic-media/images/out 2.jpg" class="card-img-top" alt="out 2">
+      <div class="card-body">
+        <h5 class="card-title">Make time for you two as a couple</h5>
+        <p class="card-text">With work and family responsibilities, it can be easy to lose the romance factor. Plan special dates, either to go out or just stay at home. If you have children, send them on a play date while you relax, talk, and enjoy each other's company. .</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="/Busia-islamic-media/images/out.jpg" class="card-img-top" alt="out">
+      <div class="card-body">
+        <h5 class="card-title">Plan for some personal time</h5>
+        <p class="card-text">Alone time is just as important as couple time. Everyone needs time to recharge, think, and enjoy personal interests. That time is often lost when you're married, especially if you have kids. Go out with friends, take a class, or do volunteer work, whatever you find enriching. When you're back together with your spouse, you'll appreciate each other even more. .</p>
+      </div>
+    </div>
+  </div>
+</div><br><br>
+
+        <h5>Understand that it's OK to disagree</h5>
+         <br>
+         <p>You won't agree on everything, but it is important to be fair and respectful during disagreements. Listen to your spouse's point of view. Try not to get angry and don't let yourself become too frustrated. Walk away and calm down if you need to, then discuss the problem again when you're both in a better frame of mind. Compromise on problems so that you both give a little. </p>
+        <hr>
+        <h5>Build trust</h5>
+        <p>Marriage therapist and researcher John Gottman, Ph.D., has found that criticism, contempt, defensiveness, and stonewalling are serious threats to a marriage. The more a couple engages in these destructive activities, the more likely they are to divorce. His decades of research and of working with couples have shown that spouses who stay together know how to fight without being hostile and to take responsibility for their actions. They are also more likely to respond quickly to each other’s wishes to make up after fights and repair the relationship</p>
+        <br><br>
+
+        <h5>Learn to forgive</h5> 
+
+        <p>Everyone makes mistakes. Your spouse may hurt your feelings or do something that upsets you, and that may make you angry, even furious. But it's important to deal with your feelings, let them go, and move on. don’t keep bringing up the past.<br><br>
+
+          Remember to remain committed to your spouse, your family, and the life that you have built together. Support each other emotionally and in everyday ways. You, your spouse, and your relationship may grow and change with time, but these ideas can help your marriage stay successful over the years. </p><br>
+          <hr>
+          <p><font color="blue">An-Nisa 4:34</font> is the 34th verse in the fourth chapter of the Quran.[1] This verse adjudges the role of a husband as protector and maintainer of his wife and how he should deal with disloyalty on her part. Scholars vastly differ on the implications of this verse, with many Muslim scholars arguing that it serves as a deterrent from anger-based domestic violence.[2][3] The translation of the verse is also subject to debate among Muslim scholars, which can read 'discipline them gently'. Furthermore, as that said in a hadith transmitted by Abu Huraira, slapping someone across their face was forbidden.[4] </p>
+        <q><small>Men are the caretakers of women, as men have been provisioned by Allah over women and tasked with supporting them financially. And righteous women are devoutly obedient and, when alone, protective of what Allah has entrusted them with. And if you sense ill-conduct from your women, advise them ˹first˺, ˹if they persist,˺ do not share their beds, ˹but if they still persist,˺ then discipline them ˹gently˺. But if they change their ways, do not be unjust to them. Surely Allah is Most High, All-Great.</small></q>
+          
+        <br>
+        <hr>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="/Busia-islamic-media/images/thoughts.jpg" class="img-fluid rounded-start" alt="thoughts">
+            </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Share authority</h5>
+                <p class="card-text">Share authority. Consult your partner about matters that affect you both. Show your partner that their opinion matters to you. If you disagree, do not dismiss the disagreement. Listen to your partner's logic, ask questions, and change your mind if they are right.[2]
+                  The Prophet sought the advice of his wife 'Hazrat Ayesha, and followed her good counsel.</p>
+                
+              </div>
+            </div>
+          </div>
+      
+        
+      <h2><b>The husband’s responsibility to educate his wife</b></h2>
+        <h2>The Quran says:</h2>
+       <h5> Question</h5>
+       <br>
+        <p>If a muslim man has taken a muslim wife, and not fulfilled his obligations set forth by allah and the quran.<br>
+        As a result the muslim women leaves the deen, and now doesn't cover and maybe not even practicing islam anymore.<br>
+       <b> My question is, what are the consciquences of their actions?</b></p>
+         
+               <br>
+                 <h5>Answer</h5>
+                
+                 <br>
+                 <p>Praise be to Allah.</p>
+
+                  <p>Allaah says (interpretation of the meaning): </p>
+
+<p>“O you who believe! Ward off yourselves and your families against a Fire (Hell) whose fuel is men and stones, 
+  <br>over which are (appointed) angels stern (and) severe, who disobey not, (from executing) the Commands they 
+  <br>receive from Allaah, but do that which they are commanded”[al-Tahreem 66:6]<br>
+
+  It was narrated from Ibn ‘Umar that the Prophet (peace and blessings of Allaah be upon him) <br>said:<br> “Each of you is a shepherd and each of you is responsible for his flock. The ameer (ruler) who governs the <br>people is a shepherd and is responsible for his flock. A man is the shepherd of the members of his household and is responsible for them. <br>A woman is the shepherd of her husband’s house and children and is responsible for them. A slave is the shepherd <br>of his master’s wealth and is responsible for it. Each of you is a shepherd and each of you is responsible <br>for his flock.” (Narrated by al-Bukhaari, 7138; Muslim, 1829) </p>
+
+<p>From these two texts it is quite clear that a man is responsible for his family with regard to teaching them and making sure that they follow Islam, and he should use forceful measures when necessary and when that is the only way to serve this purpose. Allaah will call every shepherd to account for whatever was under his care, so whoever neglects his wife and children in this regard is undoubtedly taking a great risk. Indeed, there is a stern warning issued to such people which makes the flesh crawl. In Saheeh al-Bukhaari (7151) and Saheeh Muslim (142), in Kitaab al-Imaarah, it is narrated that Ma’fil ibn Yasaar al-Muzni (may Allaah be pleased with him) said, “I heard the Messenger of Allaah () peace and blessings of Allaah be upon him) say: “There is no slave to whom Allaah has entrusted the care of people, and he dies neglecting his flock, but Allaah will forbid Paradise to him.” </p>
+
+<p>So a man’s responsibility towards his wife is great indeed and he must fear Allaah and do the best he can to fulfil it, whilst always making du’aa’ for himself and his family, that they may be guided and granted strength. </p>
+
+<hr>
+<h5>
+  Pay attention to your spouse's feelings.</h5> <p>How your spouse is feeling should always matter to you. Share in your spouse's joys, and comfort them when they are unhappy. One report says that the wife of the Prophet was on a journey with him. She was late so the Prophet received her while she was crying. The Prophet wiped her tears with his own hands and tried his utmost to calm her down.</p>
+
+
+
+
+
+  <h4>Characteristics of A Muslim husband</h4>
+  <br>
+<h5>Taqwa (Piety)</h5>
+<p>As always, the Qur’an and the Ahlul Bayt (a) are our best source of guidance for the qualities to look for in a potential Muslim spouse. Allah tells us in the Holy Qur’an:</p>
+
+<q>They are a garment for you, and you are a garment for them.<br>
+
+  QURAN – 2:187</q>
+
+<br>
+<p>When choosing a potential partner, we need to consider if they can fulfill the role of being ‘a garment’ in our lives. To realize what the best ‘garment’ for us is, reflect on the below ayah:</p>
+
+
+
+<q>the best clothing is righteousness. This is one of Allah’s bounties, so perhaps you will be mindful.<br>
+
+  QURAN – 7:26</q>
+
+<h5>Good Manners</h5>
+<br>
+<p>Someone with a good nature and good manners will naturally treat their partner well. The Holy Prophet has said: ‘If you find a boy whose Akhlaq (ethics/manners) is good and who follows the faith properly, give your daughter in marriage to him. If matches are made without considering the aspects of akhlaq and faith, it will cause mischief and disturbance in the Islamic society.’</p>
+
+<p>The first measure of a man’s character is how he treats those around him. Observe how he is with others – does he treat his parents with respect? Note how he interacts with people of different age, race, or status – is he consistently kind and compassionate? Does he seem honest or does his body language convey otherwise? Watch out for any red flags which may point to a bad temper.</p>
+<br>
+<p>Imam Ridha (AS) wrote in reply to a person who had asked him if it was advisable to marry his daughter to a person known for his ill nature, “If he is ill-natured (bad tempered), don’t marry your daughter to him.” 3</p>
+
+<br>
+<h5> Common Sense and Reason</h5>
+
+<p>Marriage has its ups and downs. It is important to have a partner who has a healthy mind and the ability to reason. He would be able to apply common sense and the teachings of the Quran and Sunnah to life situations, to deal with difficulties. </p>
+<br>
+<img src="/Busia-islamic-media/images/weed.jpg" width="50%" height="20%" alt="weed">
+
+<br>
+<hr>
+
+
+  
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/Busia-islamic-media/images/thanks.jpg" class="img-fluid rounded-start" alt="thanks">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><b>Show your gratitude </b></h5>
+        <p class="card-text"><b>Leave her love notes and thank-you notes, but remember that all blessings come from Allah Subhana wa Ta'alaa, so say "Alhamdulillah" when you see something that makes you feel grateful</b>.</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="slideshow-container">
+
+  <div class="mySlides">
+    <q> 
+The Prophet Muhammad (SAW) said: if husband and the wife look at each other with love , Allah looks at both of them with mercy
+
+
+      </q>
+    <p class="author"><font color="blue"></font></p>
+  </div>
+  
+  <div class="mySlides">
+    <q>The relationship between a husband and his  wife should be like the relationship of a hand and an eye . If the eye cries, the hand should always be there to wipe its tears. just like the husband wipe the wife's tears.</p>
+    <p class="author"><font color="blue"></font></p>
+  </div>
+  
+  <div class="mySlides">
+    <q><h2>Messenger of Allah(SAW)</h2><br>said:Take my advice with regard to women act kindly towards women, for they were created from a rib, and the most crooked part of  a rib is its uppermost. if you attempt to straighten it , you will break it and if you leave it alone it will remain crooked , so act kindly towards women [Al-Bukhari and muslim]. </p>
+    <p class="author"></p>
+  </div>
+  
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  </div>
+  
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+<br>
+<hr>
+  <h3><b>Prophet Muhammad says treat your wives with kindness</b></h3>
+  <br>
+  <p>On the Last Hajj -- called Farewell Pilgrimage -- Prophet Muhammad stood among 100,000 faithful followers on Mount Arafat making his last will and testament. His message was being echoed to the entire assembly through persons appointed to repeat what they heard onward to others who could not directly hear him. He also willed that his message be carried to one and all through the ages until the Last Day so those that were not present might follow even better than those who were gathered there with him on that holy day.</p>  
+  <br>
+  <p>He said, "Oh people, listen to my words; for I do not know if I shall be among you after this year. Remember that you have to appear before your Lord who will demand from you an account of all your actions."</p>
+  <br>
+  <p>He said, "Oh people, you have rights over your wives, and your wives have rights over you. Remember, you must always treat your wives with kindness. Woman is weak and cannot protect her own rights. When you got married, God appointed you the trustees of those rights. You brought your wives to your homes under the Law of God. You must not, therefore, insult the trust which God has placed in your hands."</p>
+  
+  <p>Prophet Muhammad advised Muslims to marry; he forbade the practice of celibacy. He said, "Marriage is my precept and my practice. Those who do not follow my practice are not of me." He also said, "When a man has married, he has completed one half of his religion."<br><br>
+
+Prophet Muhammad said, "Best among you is one who is best to his wife, and I am best among you in my dealings with my wives."</p>
+  
+  <p>Prophet Muhammad advised Muslims to marry; he forbade the practice of celibacy. He said, "Marriage is my precept and my practice. Those who do not follow my practice are not of me." He also said, "When a man has married, he has completed one half of his religion."
+
+Prophet Muhammad said, "Best among you is one who is best to his wife, and I am best among you in my dealings with my wives."</p>
+  
+  
+  <p>In some older cultures and religions, women were forced to separate themselves away from their families during their menstrual periods. The Holy Qur'an declared that the period of menstruation was a cause of discomfort and suffering for the women and therefore men were barred from having sex with their wives during this period and were asked to let them alone. Prophet Muhammad treated his wives with special care during those days and showed more love and attention to them. His wife, Aisha, says, "During the days of menstrual cycle the Prophet would drink from my cup, especially from the site I had taken a sip, and used to take a bite from the same piece of meat I had eaten from."</p>
+  <br>
+  <p>Allah says in the Holy Qur'an that the Holy Prophet Muhammad is a role model for all Muslims to follow as he shows through his conduct the true meaning of the word of God.</p>
+  
+  
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+  
+  <br>
+
+  <br>
+  
+
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Busia-islamic-media <a href="index.html" data-toggle="tooltip" title="Visit Busia-islamic-media">Amuslim husband</a></p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
