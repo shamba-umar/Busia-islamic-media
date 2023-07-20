@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bussinessing islamically</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta nam="description" content="html,css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #080808;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+.container{
+  width: 100%;
+  height: 50%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Bussinessing islamically #Busia-islamic-media</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="names.html">99Names of Allah</a></li>
+        <li><a href="islamicsociaty.html">Islamic sociaty</a></li>
+        <li><a href="muslimhasband.html">Amuslim husband</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="SAW.html">Lern about the Prophet_Muhammad_<font color="blue">(ﷺ)</font></a></li>
+            <li><a href="media.html">Islamic Media</a></li>
+            <li><a href="muslimhasband.html">About Prophet Muhammad(PBUH) </a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br><br>
+</div>
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="islamicsociaty.html">islamic sociaty</a></p>
+      <p><a href="blog.html">Islamic Blog</a></p>
+      <p><a href="media.html">Islamic Media</a></p>
+    </div>
+    <div class=" text-left"> 
+      <div class="col-sm-8">
+        <img src="/Busia-islamic-media/images/buss1.jpg" alt="iss" width="50%"height="40%"
+      </div>
+      <b><h2>15 How To Be Successful in Business in Islam</h2></b>
+      
+        <hr>
+      <p>The number of entrepreneur showed an increased trend year by year. Many people begin to switch their job and try to open business as their job. Time flexibility and unlimited income are the ultimate reasons which attracted scrum to start a business.<br>
+
+In Islam, Rasulullah SAW has become the perfect example as entrepreneur. Since a child Rasulullah SAW learned from His uncle Abu Thalib to shepherd cattle and sold them to neighbouring countries. And, we as His people should take Him as our model for becoming an entrepreneur. Actually, what is the key to reach successful in the business in Islam? Here we present 15 how to be successful in business in Isla</p>
+    <hr>
+    <div class="card">
+      <div class="card-header"></div>
+      <div class="card-body">
+        <div class="card-tittle">15 Down </div>
+        <div class="card-text">
+          <ul>
+            <li>Set intensions</li>
+              <li>Do halali bussiness</li>
+              <li>Focus</li>
+              <li>Dont be in debt</li>
+              <li>Never stop learning</li>
+              <li>Never give up</li>
+             <li>Pay some attention to your employee</li>
+              <li>Do not forget alms</li>
+              <li>Thinking out of the box</li>
+              <li>Self organizer</li>
+              <li>Dont forget to do dhuha prayer</li>
+              <li>Get ready for the worse</li>
+              <li>D not forget Tahajjud prayer</li>
+              <li>Work hard</li>
+              <li>Be consious of Allah</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+        <hr>
+         <p>Set intentions<br>
+          From Abi Hafs Umar bin Al Khottob RA said: I heard Rasulullah SAW said:</p>
+          <q>Indeed every deed depends on its intentions. And in fact, everyone (will be repaid) based on what he intends” (Bukhari Muslim)</q>
+        
+        <p>Before start the business we ought to ask ourselves, what is the purpose we want to reach? Other than wordly affairs, we must remember that our destination is to gain mardhothillah – sincerity of Allah. So we will always stick to Islamic ways as our guidance on running business</p>
+          <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="/Busia-islamic-media/images/halali 2.jpg" class="img-fluid rounded-start" alt="w&m">
+            </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Itss is haram to lie except in three situations</h5>
+                <p class="card-text"><ul>
+                  <li>something the man tell his wife to please her & vice-a-versa </li>
+                  <li>To lie during war</li>
+                  <li>To lie in order to bring pease between people</li>
+                </ul></p>
+                
+              </div>
+            </div>
+          </div>
+
+          
+    <br>
+        <hr>
+        <p><b>Do halal business</b><br>
+          Halal is my way. That’s the slogan we must put in mind. Do not tempted with the big income gained from the wrong way. Halal is important element to pursue soul tranquility and blessing in our life.</p>
+              
+
+
+<p>Focus</p>
+  “Man saaro ala darbi wasola”
+  
+  Words of wisdom on the top means “whoever walk on the path, he will arrive (the destination)”.<br>We should make that phrase as our motivation in business. Along the way we will face a lot of barriers and disturbance. Consistency and focus are the key to meet succes and develop the business.</p>
+    
+
+<br>
+<p><b>Dont be in debt</b><br>
+  “Believers! Do not swallow interest, doubled and redoubled, and be mindful of Allah so that you may attain true success. And have fear of the Fire which awaits those who deny the Truth.” (Ali Imron [3]: 130-131)<br>
+  
+  Running a business indeed take a lot of fund. But do not force yourself to take some money from the bank as loan.<br>
+  
+  As we already knew, being in debt to the bank means we have trapped in usury. We could start the business from the bottom, step by step or we could borrow some money from our relatives which clearly not going to be exposed with interest</p>
+<hr>
+
+<br>
+<p><b>Never stop learning</b><br>
+  Business is all about learning. Along the process we will meet some difficulties to face. We should take the lesson and learn from the<br> mistakes. We could learn by searching a mentor whom we trust and adore, joining community, learning from social media or internet, etc.</p>
+
+<br>
+<p><b>Never give up</b><br>
+  “Indeed, there is ease with hardship. Most certainly, there is ease with hardship”(Al-Insyirah : 5-6)<br>
+  
+  Allah always remains us to not give up in everything we face. As the verse above, Allah has promised us there is ease after hardship. Never give up if you have to deal with some tribulation in your business like unprofit investment, zero buyer, etc. We only need to increase our competency and continue to fight. Because no pain no gain, there is no success without a struggle. [AdSense-B]</p>
+
+
+<p><b>Pay some attention to your employee</b><br>
+  As time goes by we will nees some workers to help us run the business. As business owner we should carry on our obligatons such woker <br>salary,incentive, and their health insurance. Do not taunt and act arbitrarily towards them. We ought to advance the worker’s right<br> immediately after the job is finished. As Rasulullah SAW said:
+  
+  Rasulullah SAW said, “Give a worker his wages before his sweat is dry” (Ibnu Majjah)</p>
+
+
+
+
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/Busia-islamic-media/images/donate.jpg" class="img-fluid rounded-start" alt="thanks">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><b>Do not forget alms</b></h5>
+        <p class="card-text"><b>Alms or donation is opening door sustenance and it’s proven by many people. The more we give, the more we get. iIt is the way how to be successful in business in islam. As Allah said in Al-Baqarah verse 261:<br>“The example of those  who spend their wealth in the Way of Allah is like that of a grain of corn that sprouts seven ears, and in every ear there are a hundred grains. Thus Allah multiplies the action of whomsoever He wills. Allah is Munificent, All-Knowing.”
+
+          [AdSense-A]</b></p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<p><b>Thinking out of the box</b><br>
+  Now it’s very easy for us to reach an access to get as many as possible information to build a business. We should present a business which is out of the box, unique, creative, and difficult to imitate. We should dig many ideas and choose the right business which fit our resources and ability.</p>
+
+<br>
+<hr>
+<p><b>Self organizer</b><br>
+  Success comes from discipline and consistency. At the first building a business, there were excitement, a big passion to learn and enthusiasm to join some seminar, community, etc. As business start going well many of us begin to ignore the good habit and feel lazy.<br>
+  
+  So, to avoid that we must nurture and organize ourselves. Get used to wake up early morning to pray tahajjud and recite Al-Qur’an.<br>Subuh is the right time to refresh the mind and get some insight to expand the business.</p>
+
+
+
+<p><b>Don’t forget to do dhuha prayer</b><br>
+  Dhuha prayer is sunnah prayer which has a lot of benefit for muslim. Praying dhuha continously will give indirect affect to our blessing and estrange us from danger. As Rasulullah SAW said:<br>
+  
+  “Indeed Allah said: “O son of Adam, do for Me 4 rakaat in early day, I will fulfill your needs until the end of day” (Ahmad)</p>
+
+<br>
+
+<p><b>Get ready for the worse</b>
+  Start a business means ready for to the fail. Failed in business is ordinary thing. It’s a rare or maybe impossible to meet someone who always succeed in his business. There were times when it was so hard to rise up after a failure.<br>
+  
+  If we have ready for the worse in the beginning, we would mitigate and solve root of the problem right away. Do not forget to always seeking help from Allah to stay strong and keep up the good works.<br>
+  
+  “But when the Prayer is ended, disperse in the land and seek Allah’s Bounty, and remember Allah much so that you may prosper.” (Al Jumu’ah : 10)</p>
+
+
+  
+  
+  <p><b>Do not forget Tahajjud prayer</b><br>
+    From Jabir R.A said “I heard Rasulullah SAW said: Indeed, at that time of the night there was a time when a Muslim servant pleaded with God for the affairs of the world and the hereafter, <br>surely God would give it to him. It’s on every night. “(Muslim)<br>
+    
+    Someone who wakes up in the morning and then prays tahajud, in the morning he becomes excited and happy. A person who is passionate and joyful, will have an effect on the improvement of creativity and work motivation that is scientifically proven by a number of studies directly proportional to performance.</p>
+  
+  
+  <p><b>Work hard</b><br>
+    Hard work is the source of succeed. There is no succeed gained without a hard work. Allah loves His worshipper who works well. From Ashim bin Ubaidillah Rasulullah SAW said:<br>
+    
+    “Allah loves mu’min who works / works hard. “And in the narration of Ibn ‘Abdan,” a young man who works / works hard” (Baihaqi) [AdSense-C]</p>
+  
+  
+  
+  <p><b>Be conscious of Allah</b><br>
+    The last, remember Allah always stays by our side. If we have done our best, followed His guide, prayed to Him, and done good deeds, Allah will fulfill our needs. Allah always hears and knows what the best for us. So don’t loose hope and be conscious of Allah. Allah said:<br>
+    
+    “That is to what all those that believe in Allah and the Last Day are exhorted. Allah will find a way out for him who fears Allah. and will offer him sustenance from where he never even imagined. Whoever puts his trust in Allah, He shall suffice him. Surely Allah brings about what He decrees; Allah has set a measure for everything” (Ath-Thalaq: 2-3)<br>
+    
+    
+    <br>
+    So, that’s all 15 how to be successful in business in islam. We must walk in the right path to gain Allah blessing and attain succeed in everything we do.</p>
+  
+  
+  
+  
+  <h2>Bussiness Tips</h2>
+    <div class="slideshow-container">
+
+  <div class="mySlides">
+    <q> 
+      <b>MAKE PROFIT THE SECONDARY AIM</b><br>
+      The first goal of a Muslim business should not be cashing in on a Muslim market. It should be pleasing Allah and establishing Halal as a way of life.<br>
+      
+      Seeking profit is not a bad aim, but it should be secondary.<br>
+      
+      By making Allah the goal, and implementing Islamic rules of honesty, truthfulness, and good behavior with customers, Insha Allah, any Muslim business is bound to boom.
+
+
+      </q>
+    <p class="author"><font color="blue"></font></p>
+  </div>
+  
+  <div class="mySlides">
+    <q> <b>AIM FOR A HIGHER GOAL</b><br>
+      Don't just aim for one successful Halal grocery shop in your chosen neighborhood. Think big. Improve the inventory of your store, the types of items in it, and strive to find ways to improve service and profit margins.<br>
+      
+      As well, look into the possibility of pooling resources within the Muslim community or with other shareholders to expand the business. Doing this will also reduce overhead costs and in the long run, the price of products for your consumers.</p>
+    <p class="author"><font color="blue"></font></p>
+  </div>
+  
+  <div class="mySlides">
+    <q>WORK WITH OTHERS IN YOUR MARKET<br>
+      DO NOT SELL THE HARAM<br>
+      BE TRUTHFUL AND HONEST<br>
+      BE OPEN TO SCRUTINY AND CRITICISM<br>
+      BE CLEAN!<br>
+      WORK WITH OTHERS IN YOUR MARKET</p>
+    <p class="author"></p>
+  </div>
+  
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  </div>
+  
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+  
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+  
+  <br>
+
+  <br>
+  
+
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Busia-islamic-media <a href="index.html" data-toggle="tooltip" title="Visit Busia-islamic-media">Bussinessing islamically</a></p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>

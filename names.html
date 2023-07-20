@@ -1,102 +1,503 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>99names</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-</head>
-<body>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>99 Names</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #080808;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+.container{
+  width: 100%;
+  height: 50%;
+}
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="names.html" class="w3-bar-item w3-button"><b>99</b> Names of Allah</a>
-    <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="#projects" class="w3-bar-item w3-button">Projects</a>
-      <a href="#about" class="w3-bar-item w3-button">About</a>
-      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">99Names #Busia-islamic-media</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="names.html">99Names of Allah</a></li>
+        <li><a href="islamicsociaty.html">Islamic sociaty</a></li>
+        <li><a href="SAW.html">Prophet Muhammad(PBUH)</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="SAW.html">Lern about the Prophet_Muhammad_<font color="blue">(ﷺ)</font></a></li>
+            <li><a href="media.html">Islamic Media</a></li>
+            <li><a href="relative.html">Relatives</a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
     </div>
   </div>
+</nav>
+<br><br>
 </div>
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="islamicsociaty.html">islamic sociaty</a></p>
+      <p><a href="muslimwife.html">muslim-wife</a></p>
+      <p><a href="media.html">Islamic Media</a></p>
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <hr>
+      <h1><b>99 Names of Allah (Al Asma Ul Husna)</b></h1>
+      <p>The first pillar of imaan (faith) in Islam is Belief in Allah. As Muslims, we believe in Allah in accordance with His beautiful names and attributes. Allah has revealed His names repeatedly in the Holy Quran primarily for us to understand who He is. Learning and memorizing the names of Allah will help us to identify the correct way to believe in Him. There is nothing more sacred and blessed than understanding the names of Allah and living by them. How do we expect to worship, love, fear and trust our Lord, The Almighty Allah, if we don’t know who He is?</p>
+<br>
+      <p><b>Definition of 99names</b> </p>
+      <p><b>Allah – the One and Only God, who is most merciful, compassionate and loving towards His creations. The 99 Names of Allah (also known as Asma-ul Husna) in Islam are the names of Allah which signify different aspects and attributes of Him</p>
+      <p><b>Allah says in the Quran</b></p>
+      <p> And to Allah belong the best names, so invoke Him by them.. (Quran 7:180)</p>
+      <br>
+      <p>Allah – there is no deity except Him. To Him belong the best names. (Quran 20:8)</p>
+      <br>
+      <p>He is Allah, the Creator, the Inventor, the Fashioner; to Him belong the best names. (Quran 59:24)</p>
+      <br>
+      <p>Prophet Muhammad (ﷺ) said, “Allah has ninety-nine names, i.e. one-hundred minus one, and whoever knows them will go to Paradise.”
+        (<font color="green">Sahih Bukhari 50:894</font>)</p>
+        <br>
+        <p>Abu Huraira reported Allah’s Messenger (ﷺ) as saying: There are ninety-nine names of Allah; he who commits them to memory would get into Paradise. Verily, Allah is Odd (He is one, and it is an odd number) and He loves odd number..”
+          (<font color="green">Sahih Muslim Book-48 Hadith-5</font>)</p><b/
 
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="/Busia-islamic-media/images/Allah.jpg" alt="Architecture" width="1500" height="800">
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>99</b></span> <span class="w3-hide-small w3-text-light-grey">Names</span></h1>
+      <h1>99 names of Allah – Meaning and Explanation</h1>
+      
+      <table>
+        <tr>
+          <th bgcolor=" sky blue"><font color="white">#</font></th>&nbsp;
+          <th bgcolor="sky blue"><font color="white">Name</font></th>&nbsp;
+          
+          <th bgcolor="sky blue"><font color="white">Transliteration</font></th>&nbsp;
+          <th bgcolor="sky blue"><font color="white">Meaning</font></th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><big>ٱلْرَّحْمَـانُ</big></td>
+          
+          
+          <td>AR-RAHMAAN</td>
+        <td>The Most or Entirely Merciful</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><big>ٱلْرَّحِيْمُ</big></td>
+          
+          <td>AR-RAHEEM</td>
+        <td>The Bestower of Mercy</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>ٱلْمَلِكُ</td>
+          
+          <td>AL-MALIK</td>
+        <td>The King and Owner of Dominion</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>ٱلْقُدُّوسُ</td>
+          
+          <td>AL-QUDDUS</td>
+        <td>The Absolutely Pure</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>ٱلْسَّلَامُ</td>
+          
+          <td>AS-SALAM</td>
+        <td>The Perfection and Giver of Peace</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>ٱلْمُؤْمِنُ</td>
+          <td>AL-MU’MIN</td>
+          <td>The One Who gives Emaan and Security</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>ٱلْمُهَيْمِنُ</td>
+          <td>AL-MUHAYMIN</td>
+          <td>The Guardian, The Witness, The Overseer</td>
+        </tr>
+      </table>
+      
+  <h1>Other titles and qualities</h1>
+  <p>There are also references to Muhammad as "Messenger", "Messenger of God", and "Prophet" 
+    (such as in Quran<font color="blue"> 2:101, 2:143, 2:151, 3:32, 3:81, 3:144, 3:164, 4:79–80, 5:15, 5:41, 7:157, 8:1,
+     9:3, 33:40, 48:29, </font>and<font color="blue"> 66:9</font>). Other terms are used, including "Warner", "bearer of glad tidings",
+      and the "one who invites people to a Single God" (,<font color="blue">12:108</font>, and <font color="blue">33:45–46</font>), "Seal of the Prophets" 
+      (<font color="blue">Khatam an-Nabiyyin</font>) <font color="blue">33:40</font> i.e. there will be no more prophets after him), a "Summoner unto Allah"
+       and "a Lamp that gives bright light" <font color="blue">33:46</font>
+
+    Verse <font color="blue">29:48</font> -- "And you did not recite before it any scripture, nor did you inscribe one with your right hand.
+     Otherwise the falsifiers would have had [cause for] doubt"—is thought to indicate that Muhammad was illiterate
+      and had not read any earlier scriptures.
+    
+    The Quran disclaims any superhuman characteristics for Muhammad but describes him as a man possessing the highest 
+    moral excellence (Quran <font color="blue">68:4</font> "And thou dost, surely, possess sublime moral excellences"). God made him a good 
+    example or a "goodly model" for Muslims to follow (<font color="blue">68:4</font>, and <font color="blue">33:21</font>), full of sympathy for Muslims
+     ("Grievous to him is what you suffer; [he is] concerned over you and to the believers is kind and merciful" <font color="blue">9:128</font>)
+     . In Islamic tradition, Muhammad's relation to humanity is as a bringer of truth (God's message to humanity), 
+     and as a blessing (<font color="blue">39:33</font>, and <font color="blue">21:107</font>) whose message will give people salvation in the <font color="blue">afterlife</font>. It is believed by
+      at least one pious commentator that it is Muhammad's teachings and the purity of his personal life alone that keep
+       alive the worship of God.</p>
+  <hr>
+
+ <h3>The battles</h3>
+<div class="slideshow-container">
+
+  <div class="mySlides">
+    <q>The first battle the Muslims fought against their unbeliever enemies at <font color="blue">Badr</font> in 624 CE was a victory where Muslims killed several important Meccan leaders. The battle is mentioned in the Quran as an example of how God helped Muslims and who should show gratitude in return.
+
+        <font color="blue">3:123</font> "And already had Allah given you victory at [the battle of] Badr while you were few in number. Then fear Allah ; perhaps you will be grateful." A verse (apparently addressed to Muhammad) also talks about 3000 angels that helped the believers in battle.
+        <font color="blue">3:124</font> "[Remember] when you said to the believers, 'Is it not sufficient for you that your Lord should reinforce you with three thousand angels sent down?'"
+      </q>
+    <p class="author"><font color="blue">Battle of Badr</font></p>
   </div>
-</header>
-
-<!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
-
-  <!-- Project Section -->
   
-  <!-- About Section -->
-  <div class="w3-container w3-padding-32" id="about">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-      occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-      laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
+  <div class="mySlides">
+    <q>A year later Muslims suffered a setback against a superior force of Meccans at the Battle of Uhud when several dozen Muslims were killed and Muhammad was wounded. A verse revealed soon after explained why if Muslims had God's favor they had not won the battle as they had at Badr: they disobeyed the Prophets orders and were hasty in collecting loot before the battle was won.[20][21]
+
+        3:152 "And Allah had certainly fulfilled His promise to you when you were killing the enemy by His permission until [the time] when you lost courage and fell to disputing about the order [given by the Prophet] and disobeyed after He had shown you that which you love."
+      </q>
+    <p class="author"><font color="blue">Battle of Uhud</font></p>
   </div>
-
-  <!-- Contact Section -->
- 
   
-<!-- Image of location/map -->
-<div class="w3-container">
-  <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
-</div>
+  <div class="mySlides">
+    <q>There are immense benefits to learning and memorising the beautiful 99 names of Allah, as it bring us closer and strengthens our relationship with the Almighty Allah.
 
-<!-- End page content -->
-</div>
+      Prophet Muhammad (peace be upon him) said:</q>
+      <q>Allah has ninety-nine names, i.e. one-hundred minus one, and whoever knows them will go to Paradise.
+        </q>
+    <p class="author">Battle of the Trench</p>
+  </div>
+  
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  </div>
+  
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+  
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+  
+  <br>
+
+  <br>
+  
 
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
-  <p>Powered by <a href="index.html" title="islamic media" target="_blank" class="w3-hover-text-green">Busia-islamic-media</a></p>
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Busia-islamic-media<a href="index.html" data-toggle="tooltip" title="Visit Busia-islamic-media">Muhammad(PBUH)</a></p> 
 </footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
 
 </body>
 </html>
-
-
-
-<div class="row">
-  <div class="col-sm-4">
-    <p class="text-center"><strong>Ads</strong></p><br>
-    <a href="#demo" data-toggle="collapse">
-      <img src="/Busia-islamic-media/images/loo.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-    </a>
-    <div id="demo" class="collapse">
-      <p>islamic text</p>
-      <p>islamic text</p>
-      <p>islamic text</p>
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <p class="text-center"><strong>Ads</strong></p><br>
-    <a href="#demo2" data-toggle="collapse">
-      <img src="/Busia-islamic-media/images/loo.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-    </a>
-    <div id="demo2" class="collapse">
-      <p>islamic text</p>
-      <p>islamic text</p>
-      <p> since 2022</p>
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <p class="text-center"><strong>Ads</strong></p><br>
-    <a href="#demo3" data-toggle="collapse">
-      <img src="/Busia-islamic-media/images/loo.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-    </a>
-    <div id="demo3" class="collapse">
-      <p>islamic text</p>
-      <p>islamic text</p>
-      <p>islamic text</p>
-    </div>
-  </div>
-</div>
