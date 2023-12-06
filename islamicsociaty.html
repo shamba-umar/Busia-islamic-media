@@ -20,26 +20,37 @@ body {font-family: "Lato", sans-serif}
 </style>
 </head>
 <body>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="" class="w3-bar-item w3-button w3-padding-large">islamic sociaty</a>
-    <a href="dawa.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Da’wah</a>
-    <a href="names.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">99Names</a>
-    <a href="SAW.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Prophet Muhammad (ﷺ)</a>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="blog.html" class="w3-bar-item w3-button">Islamic Blog</a>
-        <a href="media.html" class="w3-bar-item w3-button">Islamic Media</a>
-        <a href="mail.html" class="w3-bar-item w3-button">mail to</a>
-      </div>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Da’wah #Busia-islamic-media</a>
     </div>
-    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="names.html">99Names of Allah</a></li>
+        <li><a href="islamicsociaty.html">Islamic sociaty</a></li>
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="SAW.html"><b>Lern about the Prophet_Muhammad_</b><font color="blue">(ﷺ)</font></a></li>
+            <li><a href="media.html"><b>Islamic Media</b></a></li>
+            <li><a href="bussiness.html"><b>Bussinessing islamically</b></a></li> 
+          </ul>
+        </li>
+        
+      </ul>
+    </div>
   </div>
-</div>
+</nav>
 
 
 <!-- Page content -->
